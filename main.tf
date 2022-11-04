@@ -6,6 +6,7 @@ locals {
 
 module "vault" {
   source            = "github.com/terraform-vsphere-modules/terraform-vsphere-virtual-machine"
+  tags = ["${vsphere_tag.managed.id}"]
   count             = var.count_index
   datacenter        = local.vsphere_data.datacenter
   cluster           = local.vsphere_data.cluster
