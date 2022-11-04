@@ -3,9 +3,6 @@ locals {
 }
 
 module "vault" {
-  depends_on = [
-    module.networks
-  ]
   source            = "github.com/terraform-vsphere-modules/terraform-vsphere-virtual-machine"
   count             = var.vault_machine_count
   datacenter        = local.vsphere_data.datacenter
