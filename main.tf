@@ -9,7 +9,7 @@ module "vault" {
   cluster           = local.vsphere_data.cluster
   primary_datastore = local.vsphere_data.primary_datastore
   networks = {
-    "${data.tfe_outputs.networks.public_networks[count.index]}" : "dhcp"
+    "${data.tfe_outputs.networks.values.public_networks[count.index]}" : "dhcp"
     # "${module.networks.public_networks[count.index]}" : "dhcp"
   }
   # This will clone an existing packer template registered in vCenter
