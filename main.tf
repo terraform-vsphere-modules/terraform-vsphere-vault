@@ -5,8 +5,11 @@ locals {
 
 
 module "vault" {
+  depends_on = [
+    vsphere_tag.managed
+  ]
   source            = "github.com/terraform-vsphere-modules/terraform-vsphere-virtual-machine"
-  tags = ["${vsphere_tag.managed.id}"]
+  #tags = ["${vsphere_tag.managed}"]
   count             = var.count_index
   datacenter        = local.vsphere_data.datacenter
   cluster           = local.vsphere_data.cluster

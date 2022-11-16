@@ -1,6 +1,6 @@
 module "networks" {
   source  = "app.terraform.io/burkey/quickstart-module/nsx"
-  version = "0.0.4"
+  version = "0.0.5"
 
   environment = var.environment
   private_subnets = [
