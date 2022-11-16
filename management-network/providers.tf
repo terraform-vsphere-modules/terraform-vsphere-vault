@@ -9,10 +9,6 @@ terraform {
       source  = "registry.terraform.io/hashicorp/vsphere"
       version = "2.2.0"
     }
-    tfe = {
-      source = "hashicorp/tfe"
-      version = "0.38.0"
-    }
   }
 }
 
@@ -24,9 +20,5 @@ provider "nsxt" {
 provider "vsphere" {
   #vsphere_server = var.vsphere_server
   # Configuration options
-}
-
-provider "tfe" {
-  
 }
 

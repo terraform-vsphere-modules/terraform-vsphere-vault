@@ -7,7 +7,7 @@ variable "environment" {
 # variable "nsx_server" {}
 # variable "vsphere_server" {}
 
-variable "count_index" {
+variable "vault_machine_count" {
   type    = number
   default = 1
 }
